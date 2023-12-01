@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job/constants/app_constants.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -8,7 +9,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
   final TextEditingController email = TextEditingController();
   final TextEditingController password = TextEditingController();
 
@@ -18,8 +18,13 @@ class _LoginPageState extends State<LoginPage> {
     password.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Container(
+        color: Color(kOrange.value),
+      ),
+    );
   }
 }

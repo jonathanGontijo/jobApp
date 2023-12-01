@@ -6,6 +6,7 @@ import 'package:job/views/ui/onboarding/widgets/page_three.dart';
 import 'package:job/views/ui/onboarding/widgets/page_two.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -64,6 +65,44 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       ),
                     ),
             ),
+            Positioned(
+                child: onBoardNotifier.isLastPage
+                    ? const SizedBox.shrink()
+                    : Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20.w, vertical: 30.h),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  pageController.jumpToPage(2);
+                                },
+                                child: ReusableText(
+                                  text: "Skip",
+                                  style: appstyle(
+                                      16, Color(kLight.value), FontWeight.w500),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  pageController.nextPage(
+                                    duration: Duration(milliseconds: 300),
+                                    curve: Curves.ease,
+                                  );
+                                },
+                                child: ReusableText(
+                                  text: "Next",
+                                  style: appstyle(
+                                      16, Color(kLight.value), FontWeight.w500),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ))
           ],
         );
       }),

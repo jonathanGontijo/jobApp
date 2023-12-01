@@ -5,6 +5,8 @@ import 'package:job/views/common/custom_outline_btn.dart';
 import 'package:job/views/common/exports.dart';
 import 'package:job/views/common/height_spacer.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:job/views/ui/auth/login.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class PageThree extends StatelessWidget {
   const PageThree({super.key});
@@ -38,14 +40,21 @@ class PageThree extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   CustomOutlineBtn(
-                    onTap: () {},
+                    onTap: () async {
+                      final SharedPreferences prefs =
+                          await SharedPreferences.getInstance();
+                      await prefs.setBool('entrypoint', true);
+                      Get.to(() => const LoginPage());
+                    },
                     text: "Login",
                     width: width * 0.4,
                     hieght: hieght * 0.06,
                     color: Color(kLight.value),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const LoginPage());
+                    },
                     child: Container(
                       width: width * 0.4,
                       height: hieght * 0.06,
