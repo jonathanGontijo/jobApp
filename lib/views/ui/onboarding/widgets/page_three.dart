@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:job/constants/app_constants.dart';
 import 'package:job/views/common/custom_outline_btn.dart';
 import 'package:job/views/common/exports.dart';
