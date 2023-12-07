@@ -6,6 +6,7 @@ import 'package:job/views/common/exports.dart';
 import 'package:job/views/common/height_spacer.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:job/views/ui/auth/login.dart';
+import 'package:job/views/ui/auth/signup.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PageThree extends StatelessWidget {
@@ -53,7 +54,7 @@ class PageThree extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.to(() => const LoginPage());
+                      Get.to(() => const RegistrationPage());
                     },
                     child: Container(
                       width: width * 0.4,

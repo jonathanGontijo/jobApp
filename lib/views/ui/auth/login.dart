@@ -12,6 +12,7 @@ import 'package:job/views/common/custom_textfield.dart';
 import 'package:job/views/common/exports.dart';
 import 'package:job/views/common/height_spacer.dart';
 import 'package:job/views/ui/auth/signup.dart';
+import 'package:job/views/ui/mainscreen.dart';
 import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
@@ -114,7 +115,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const HeightSpacer(size: 50),
               CustomButton(
-                onTap: null,
+                onTap: () {
+                  Get.to(() => const MainScreen());
+                },
                 text: "Login",
               )
             ],
