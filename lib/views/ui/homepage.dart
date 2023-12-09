@@ -9,6 +9,7 @@ import 'package:job/views/common/height_spacer.dart';
 import 'package:job/views/common/search.dart';
 import 'package:get/get.dart';
 import 'package:job/views/ui/jobs/jobs_list.dart';
+import 'package:job/views/ui/jobs/widgets/horizontal_tile.dart';
 import 'package:job/views/ui/search/searchpage.dart';
 
 class HomePage extends StatefulWidget {
@@ -66,6 +67,16 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
                 const HeightSpacer(size: 15),
+                SizedBox(
+                  height: hieght * 0.28,
+                  child: ListView.builder(
+                      itemCount: 4,
+                      itemBuilder: (context, index) {
+                        return JobHorizontalTile(
+                          onTap: () {},
+                        );
+                      }),
+                ),
                 const HeightSpacer(size: 20),
                 HeadingWidget(
                   text: "Recently Posted",
