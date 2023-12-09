@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:job/constants/app_constants.dart';
 import 'package:job/views/common/app_bar.dart';
+import 'package:job/views/common/app_style.dart';
 import 'package:job/views/common/drawer/drawer_widget.dart';
+import 'package:job/views/common/height_spacer.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
