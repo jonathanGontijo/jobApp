@@ -27,10 +27,10 @@ class JobHorizontalTile extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/user.png"),
+                  const CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/Facebook.png"),
                   ),
-                  WidthSpacer(width: 15),
+                  const WidthSpacer(width: 15),
                   ReusableText(
                     text: "FaceBook",
                     style: appstyle(
@@ -71,7 +71,7 @@ class JobHorizontalTile extends StatelessWidget {
                       ReusableText(
                           text: "/Monthly",
                           style: appstyle(
-                              23, Color(kDark.value), FontWeight.w600)),
+                              23, Color(kDarkGrey.value), FontWeight.w600)),
                     ],
                   ),
                   CircleAvatar(

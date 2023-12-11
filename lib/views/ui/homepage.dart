@@ -8,6 +8,8 @@ import 'package:job/views/common/heading_widget.dart';
 import 'package:job/views/common/height_spacer.dart';
 import 'package:job/views/common/search.dart';
 import 'package:get/get.dart';
+import 'package:job/views/common/vertical_tile.dart';
+import 'package:job/views/ui/jobs/job_page.dart';
 import 'package:job/views/ui/jobs/jobs_list.dart';
 import 'package:job/views/ui/jobs/widgets/horizontal_tile.dart';
 import 'package:job/views/ui/search/searchpage.dart';
@@ -71,9 +73,12 @@ class _HomePageState extends State<HomePage> {
                   height: hieght * 0.28,
                   child: ListView.builder(
                       itemCount: 4,
+                      scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return JobHorizontalTile(
-                          onTap: () {},
+                          onTap: () {
+                            Get.to(() => JobPage(title: "FaceBook", id: "12"));
+                          },
                         );
                       }),
                 ),
@@ -83,6 +88,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {},
                 ),
                 const HeightSpacer(size: 20),
+                VerticalTile()
               ],
             ),
           ),

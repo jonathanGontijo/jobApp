@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:job/views/common/exports.dart';
@@ -31,9 +30,10 @@ class SearchWidget extends StatelessWidget {
                     ),
                     const WidthSpacer(width: 20),
                     ReusableText(
-                        text: "Search for jobs",
-                        style:
-                            appstyle(18, Color(kOrange.value), FontWeight.w500))
+                      text: "Search for jobs",
+                      style:
+                          appstyle(18, Color(kOrange.value), FontWeight.w500),
+                    ),
                   ],
                 ),
               ),
@@ -44,7 +44,7 @@ class SearchWidget extends StatelessWidget {
               )
             ],
           ),
-          HeightSpacer(size: 7),
+          const HeightSpacer(size: 7),
           Divider(
             color: Color(kDarkGrey.value),
             thickness: 0.5,
