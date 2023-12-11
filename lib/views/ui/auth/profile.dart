@@ -9,6 +9,7 @@ import 'package:job/views/common/reusable_text.dart';
 import 'package:job/views/common/width_spacer.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:get/get.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -135,18 +136,101 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ),
                 Positioned(
-                    top: 2.h,
-                    right: 5.w,
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: ReusableText(
-                          text: "Edit",
-                          style: appstyle(
-                              16, Color(kOrange.value), FontWeight.w500)),
-                    ))
+                  top: 2.h,
+                  right: 5.w,
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: ReusableText(
+                      text: "Edit",
+                      style:
+                          appstyle(16, Color(kOrange.value), FontWeight.w500),
+                    ),
+                  ),
+                ),
               ],
             ),
             const HeightSpacer(size: 20),
+            Container(
+              padding: EdgeInsets.only(left: 8.w),
+              width: width,
+              height: hieght * 0.06,
+              color: Color(kLightGrey.value),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: ReusableText(
+                  text: "John@gmail.com",
+                  style: appstyle(16, Color(kDark.value), FontWeight.w600),
+                ),
+              ),
+            ),
+            const HeightSpacer(size: 20),
+            Container(
+              padding: EdgeInsets.only(left: 8.w),
+              width: width,
+              height: hieght * 0.06,
+              color: Color(kLightGrey.value),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Row(
+                  children: [
+                    SvgPicture.asset(
+                      "assets/icons/usa.svg",
+                      width: 20.w,
+                      height: 20.h,
+                    ),
+                    const WidthSpacer(width: 15),
+                    ReusableText(
+                      text: "+139999999",
+                      style: appstyle(16, Color(kDark.value), FontWeight.w600),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const HeightSpacer(size: 20),
+            Container(
+              color: Color(kLightGrey.value),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(8.h),
+                    child: ReusableText(
+                      text: "Skills",
+                      style: appstyle(16, Color(kDark.value), FontWeight.w600),
+                    ),
+                  ),
+                  const HeightSpacer(size: 3),
+                  SizedBox(
+                    height: hieght * 0.5,
+                    child: Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 8.w, vertical: 8.h),
+                        child: ListView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: skills.length,
+                          itemBuilder: (context, index) {
+                            final skill = skills[index];
+                            return Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 10.h),
+                                width: width,
+                                height: hieght * 0.06,
+                                color: Color(kLight.value),
+                                child: ReusableText(
+                                  text: skill,
+                                  style: appstyle(16, Color(kDark.value),
+                                      FontWeight.normal),
+                                ),
+                              ),
+                            );
+                          },
+                        )),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),

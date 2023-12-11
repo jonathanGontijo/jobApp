@@ -4,14 +4,14 @@ import 'package:job/constants/app_constants.dart';
 import 'package:job/controllers/exports.dart';
 import 'package:job/views/common/drawer/drawerScreen.dart';
 import 'package:job/views/common/exports.dart';
-import 'package:job/views/common/width_spacer.dart';
+//import 'package:job/views/common/width_spacer.dart';
 import 'package:job/views/ui/auth/profile.dart';
 import 'package:job/views/ui/bookmarks/bookmarks.dart';
 import 'package:job/views/ui/chat/chatpage.dart';
 import 'package:job/views/ui/device_mgt/devices_info.dart';
 import 'package:job/views/ui/homepage.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+//import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
