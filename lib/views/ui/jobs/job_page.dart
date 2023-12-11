@@ -148,6 +148,7 @@ class _JobPageState extends State<JobPage> {
               child: Padding(
                 padding: EdgeInsets.only(bottom: 20.h),
                 child: CustomOutlineBtn(
+                  onTap: () {},
                   color2: Color(kOrange.value),
                   width: width,
                   hieght: hieght * 0.04,
