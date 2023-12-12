@@ -71,9 +71,9 @@ class _JobPageState extends State<JobPage> {
                       ),
                       const HeightSpacer(size: 15),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             CustomOutlineBtn(
                               width: width * 0.26,
@@ -89,7 +89,7 @@ class _JobPageState extends State<JobPage> {
                                       22, Color(kDark.value), FontWeight.w600),
                                 ),
                                 SizedBox(
-                                  width: width * 0.2,
+                                  width: width * 0.35,
                                   child: ReusableText(
                                     text: "/monthly",
                                     style: appstyle(22, Color(kDark.value),
